@@ -61,6 +61,8 @@ class BackgroundLocatorPlugin
             val notificationCallback = args[Keys.ARG_NOTIFICATION_CALLBACK] as? Long
             PreferencesManager.setCallbackHandle(context, Keys.NOTIFICATION_CALLBACK_HANDLE_KEY, notificationCallback)
 
+            Log.d("TAG", "your log message")
+
             // Call InitPluggable with initCallbackHandle
             (args[Keys.ARG_INIT_CALLBACK] as? Long)?.let { initCallbackHandle ->
                 val initPluggable = InitPluggable()
